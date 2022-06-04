@@ -1,10 +1,9 @@
-/* Homework 9
- * Name: Melissa Swearingen & Kimberly Markley
- *
- * SQL Schema for homework 9.
- */
-
-
+/*
+Name: Melissa Swearingen & Kimberly Markley
+SQL Tables for 'Sol' System
+Databases 340
+Homework 9 & 10
+*/
 
 
 /* 
@@ -22,12 +21,13 @@
  *
  */
 
-CREATE TABLE "ARTIFICIAL_SATELLITE"
-    (
-        Satid INTEGER NOT NULL PRIMARY KEY,
-        Sat_name VARCHAR(50) NOT NULL, /* Do all Artificial Satellites have names? */
-        Country_origin VARCHAR(50) NOT NULL,
-        Task VARCHAR(50) NOT NULL,
-    );
+CREATE TABLE ARTIFICIAL_SATELLITE ( 
+    Satid INTEGER NOT NULL,
+    Sat_name VARCHAR(50) NOT NULL, /* Do all Artificial Satellites have names? */
+    Country_origin VARCHAR(50) NOT NULL,
+    Task VARCHAR(50) NOT NULL,
+    PRIMARY KEY (Satid)
+);
 
+DROP TABLE ARTIFICIAL_SATELLITE;
 
