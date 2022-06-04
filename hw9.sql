@@ -24,10 +24,13 @@ Homework 9 & 10
 CREATE TABLE ARTIFICIAL_SATELLITE ( 
     Satid INTEGER NOT NULL,
     Sat_name VARCHAR(50) NOT NULL, /* Do all Artificial Satellites have names? */
-    Country_origin VARCHAR(50) NOT NULL,
-    Task VARCHAR(50) NOT NULL,
+    Country_origin VARCHAR(50) NOT NULL, /* I think the countries or companies that own them would assign a number or name */
+    Task VARCHAR(50) NOT NULL, /*so NOT NULL makes sense to me, and VARCHAR can hold both letters and numbers - km */
     PRIMARY KEY (Satid)
 );
+
+/* used the command "sqlite3 hw9.db < hw9.sql" to run and check for syntax errors until 
+I started to get errors because not all the tables are created yet */
 
 CREATE TABLE MOON_ORBITS (
     Pid INTEGER NOT NULL,
@@ -40,8 +43,8 @@ CREATE TABLE MOON_ORBITS (
 CREATE TABLE ASTEROID (
     Aid INTEGER NOT NULL,
     Name VARCHAR(50) NOT NULL,
-    Mass INTEGER,
-    Diameter INTEGER,
+    Mass INTEGER, /* should we add NOT NULL to Mass, Diameter, Rotation? */
+    Diameter INTEGER, /* Not sure we'll have all that data for each one -km */
     Rotation_period INTEGER,
     PRIMARY KEY (Aid),
 );
