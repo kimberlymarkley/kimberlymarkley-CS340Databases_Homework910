@@ -65,7 +65,17 @@ CREATE TABLE PLANET (
     PRIMARY KEY (Pid)
 );
 
-
+CREATE TABLE MOON (
+    Mid INTEGER NOT NULL,
+    Moon_name VARCHAR(50) NOT NULL,
+    Pid INTEGER NOT NULL,
+    Mass DOUBLE PRECISION NOT NULL,
+    Radius DOUBLE PRECISION NOT NULL,
+    Gravity DOUBLE PRECISION NOT NULL,
+    Albedo DOUBLE PRECISION NOT NULL,
+    PRIMARY KEY (Mid),
+    FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
+);
 
 
 /* used the command "sqlite3 hw9.db < hw9.sql" to run and check for syntax errors until 
