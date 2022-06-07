@@ -23,7 +23,6 @@ Homework 9 & 10
 
 /* all size data is relative to Earth, and all time 
 measurement is relative to Earth's day length
-moon mass in kilos
 */
 
 DROP TABLE if exists ARTIFICIAL_SATELLITE;
