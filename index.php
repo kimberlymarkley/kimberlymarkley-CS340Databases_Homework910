@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
 
+<main>
+
 <?php
    $db = new SQLite3('filename.db');
    if(!$db) {
@@ -27,4 +29,6 @@
     }
 ?>
 </pre>
+</main>
+
 <?php include 'footer.php'; ?>

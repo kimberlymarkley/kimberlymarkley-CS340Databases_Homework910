@@ -20,4 +20,3 @@
       <a class="lnk_right" href="/motorcycles/new.php">+ Add a Bike</a>
     </nav>
   </header>
-  <main>
