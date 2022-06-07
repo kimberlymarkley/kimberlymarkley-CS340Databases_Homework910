@@ -12,6 +12,7 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
+        <li><a href="/table-data/">Table Data</a></li>
         <li><a href="/eer-diagram/">EER Diagram</a></li>
         <li><a href="/relational-schema/">Relational Schema</a></li>
       </ul>
