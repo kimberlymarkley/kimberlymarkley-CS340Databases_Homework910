@@ -1,0 +1,22 @@
+Grading Considerations
+	1	If there are extra constraints that cannot be captured by the E/R diagram, list them in a supplementary text file.
+
+	2	List any assumptions you make in the process.
+
+	3	Your E/R diagram should contain at least six (or more) entities; otherwise, it is likely not of sufficient complexity for a CS 340 project.
+
+	4	Make sure your diagram captures a significant number of relationships, and all those required to accomplish your project goals.
+
+	5	For each entity set and relationship, write a short description of what it represents or models in plain English.
+	◦	one or two sentences per entity set and relationship are enough
+	◦	these descriptions are primarily to help me understand what you are modeling and ensure that you are modeling it correctly.
+
+
+
+Deliverables:
+1. EER PDF
+2. Relational Schema PDF
+3. SQL document with Create Table commands and comments, Insert Into with Sample data (cite real life sources), then queries for each table(Limit 5), 5 Sample transactions
+4. a txt document with sample queries and result set
+
+Include public git hub
