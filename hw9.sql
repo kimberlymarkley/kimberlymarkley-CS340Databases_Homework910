@@ -45,7 +45,7 @@ DROP TABLE if exists ALIEN_LIFE;
 CREATE TABLE ALIEN_LIFE (
     Satid INTEGER NOT NULL,
     Alien_name VARCHAR(50) NOT NULL,
-    Sentient BOOLEAN NOT NULL,
+    Sentient TINYINT(1) NOT NULL DEFAULT 0,
     PRIMARY KEY (Satid, Alien_name),
     FOREIGN KEY (Satid) REFERENCES ARTIFICIAL_SATELLITE(Satid)
 );
@@ -189,3 +189,22 @@ INSERT INTO SATELLITE_TASK VALUES
 (3,'Also known as Communication, Ocean and Meteorological Satellites (COMS). Used for communication, oceanography, and meteorological observation.'),
 (4,'Used for defense and security assurance in Italy and other countries, seismic hazard analysis, environmental disaster monitoring, and agricultural mapping.'),
 (5,'Part of the worldwide Disaster Monitoring Constellation System.');
+
+DROP TABLE if exists ALIEN_LIFE;
+CREATE TABLE ALIEN_LIFE (
+    Satid INTEGER NOT NULL,
+    Alien_name VARCHAR(50) NOT NULL,
+    Sentient BOOLEAN NOT NULL,
+    PRIMARY KEY (Satid, Alien_name),
+    FOREIGN KEY (Satid) REFERENCES ARTIFICIAL_SATELLITE(Satid)
+);
+
+/* 
+Fictional data used for Alien Life values.
+*/
+INSERT INTO ALIEN_LIFE VALUES
+(1,'Poleepkwa',1),
+(2,'Ewok',1),
+(3,'Vulcan',1),
+(4,'Xenomorph',1),
+(5,"Na'vi",1);
