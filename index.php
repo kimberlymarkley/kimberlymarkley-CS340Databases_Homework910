@@ -3,7 +3,7 @@
 <main>
 
 <?php
-   $db = new SQLite3('filename.db');
+   $db = new SQLite3('hw9.db');
    if(!$db) {
       echo $db->lastErrorMsg();
    } else {

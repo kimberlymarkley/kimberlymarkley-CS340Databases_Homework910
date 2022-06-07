@@ -12,11 +12,8 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/assets/eer-diagram.pdf">EER Diagram</a></li>
-        <li><a href="/assets/relational-schema.pdf">Relational Schema</a></li>
+        <li><a href="/eer-diagram/">EER Diagram</a></li>
+        <li><a href="/relational-schema/">Relational Schema</a></li>
       </ul>
-      <a class="lnk_right" href="/cart.php">Cart (<?= $numberOfItemsInCart ?>)</a>
-      <a class="lnk_right" href="/wishlist.php">Wish List (<?= $wishListLength ?>)</a>
-      <a class="lnk_right" href="/motorcycles/new.php">+ Add a Bike</a>
     </nav>
   </header>
