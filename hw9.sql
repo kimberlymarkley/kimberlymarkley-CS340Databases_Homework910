@@ -30,12 +30,11 @@ CREATE TABLE ARTIFICIAL_SATELLITE (
     Satid INTEGER NOT NULL,
     Sat_name VARCHAR(50) NOT NULL,
     Country_origin VARCHAR(50) NOT NULL,
-    Task VARCHAR(50) NOT NULL,
     PRIMARY KEY (Satid)
 );
 
-DROP TABLE if exists SATELLITE_TASKS;
-CREATE TABLE SATELLITE_TASKS (
+DROP TABLE if exists SATELLITE_TASK;
+CREATE TABLE SATELLITE_TASK (
     Satid INTEGER NOT NULL,
     Task VARCHAR(50) NOT NULL,
     PRIMARY KEY (Satid, Task),
@@ -87,8 +86,8 @@ CREATE TABLE MOON (
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
 );
 
-DROP TABLE if exists MOON_ORBITS;
-CREATE TABLE MOON_ORBITS (
+DROP TABLE if exists MOON_ORBIT;
+CREATE TABLE MOON_ORBIT (
     Pid INTEGER NOT NULL,
     Mid INTEGER NOT NULL,
     PRIMARY KEY (Pid, Mid),
@@ -175,8 +174,18 @@ INSERT INTO PLANET VALUES
 https://en.wikipedia.org/wiki/Category:Lists_of_satellites
 */
 INSERT INTO ARTIFICIAL_SATELLITE VALUES
-(1,'Aqua','USA','Carries six instruments to observe interactions among the four spheres for Earth systems: oceans, land, atmosphere, and biosphere.'),
-(2,'CALIPSO','France','Studies thickness of clouds and aerosols for understanding of how much air pollution is present and changes in compositions in the atmosphere.'),
-(3,'Chollian-2A','South Korea','Also known as Communication, Ocean and Meteorological Satellites (COMS). Used for communication, oceanography, and meteorological observation.'),
-(4, 'COSMO-SkyMed 4','Italy','Used for defense and security assurance in Italy and other countries, seismic hazard analysis, environmental disaster monitoring, and agricultural mapping.'),
-(5, 'NigeriaSat-1','Nigeria','Part of the worldwide Disaster Monitoring Constellation System.');
+(1,'Aqua','USA'),
+(2,'CALIPSO','France'),
+(3,'Chollian-2A','South Korea'),
+(4, 'COSMO-SkyMed 4','Italy'),
+(5, 'NigeriaSat-1','Nigeria');
+
+/* Satellite data from links here:
+https://en.wikipedia.org/wiki/Category:Lists_of_satellites
+*/
+INSERT INTO SATELLITE_TASK VALUES
+(1,'Carries six instruments to observe interactions among the four spheres for Earth systems: oceans, land, atmosphere, and biosphere.'),
+(2,'Studies thickness of clouds and aerosols for understanding of how much air pollution is present and changes in compositions in the atmosphere.'),
+(3,'Also known as Communication, Ocean and Meteorological Satellites (COMS). Used for communication, oceanography, and meteorological observation.'),
+(4,'Used for defense and security assurance in Italy and other countries, seismic hazard analysis, environmental disaster monitoring, and agricultural mapping.'),
+(5,'Part of the worldwide Disaster Monitoring Constellation System.');
