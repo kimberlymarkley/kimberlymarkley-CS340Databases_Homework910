@@ -4,12 +4,13 @@
 
 <?php
    $db = new SQLite3('hw9.db');
-   if(!$db) {
-      echo $db->lastErrorMsg();
-   } else {
-      echo "Opened database successfully\n";
+   if($db->connect_error) {
+      die("Error: Could not connect to database. " . $db->connect_error);
    }
 
+
+
+   
 ?>
 
 <form action="?" method="post">
