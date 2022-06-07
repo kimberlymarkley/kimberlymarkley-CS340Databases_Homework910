@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
   <title>Homework 9</title>
-  <link rel="stylesheet" type="text/css" media="all" href="/assets/main.css">
+  <link rel="stylesheet" type="text/css" media="all" href="/assets/stylesheets/main.css">
   <style>
   </style>
 </head>
