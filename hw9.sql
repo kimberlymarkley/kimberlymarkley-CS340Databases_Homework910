@@ -79,7 +79,6 @@ CREATE TABLE MOON (
     Mid INTEGER NOT NULL,
     Moon_name VARCHAR(50) NOT NULL,
     Pid INTEGER NOT NULL,
-    Mass DOUBLE PRECISION(10,6) NOT NULL,
     Radius DOUBLE PRECISION(10,6) NOT NULL,
     Gravity DOUBLE PRECISION(10,6) NOT NULL,
     Albedo DOUBLE PRECISION(10,6) NOT NULL,
@@ -110,7 +109,7 @@ DROP TABLE if exists COMET;
 CREATE TABLE COMET (
     Cid INTEGER NOT NULL,
     Name VARCHAR(50) NOT NULL,
-    Mass DOUBLE PRECISION(10,6) NOT NULL,
+    Mass DOUBLE PRECISION(10,6),
     PRIMARY KEY (Cid)
 );
 
@@ -208,18 +207,6 @@ https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Sol
 INSERT INTO STAR VALUES
 (1,'Sol',332978.9,3.828,109.3);
 
-DROP TABLE if exists MOON;
-CREATE TABLE MOON (
-    Mid INTEGER NOT NULL,
-    Moon_name VARCHAR(50) NOT NULL,
-    Pid INTEGER NOT NULL,
-    Radius DOUBLE PRECISION(10,6) NOT NULL,
-    Gravity DOUBLE PRECISION(10,6) NOT NULL,
-    Albedo DOUBLE PRECISION(10,6) NOT NULL,
-    PRIMARY KEY (Mid),
-    FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
-);
-
 /* Moon data from: 
 https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
 */
@@ -230,3 +217,33 @@ INSERT INTO MOON VALUES
 (4,'Dione',6,0.088,0.0236,0.998),
 (5,'Mimas',6,0.031,0.00649,0.962);
 
+/* Moon data from: 
+https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
+*/
+INSERT INTO MOON_ORBIT VALUES
+(3,1),
+(5,2),
+(5,3),
+(6,4),
+(6,5);
+
+/* Asteroid data from: 
+https://en.wikipedia.org/wiki/List_of_exceptional_asteroids
+and fictionalized
+*/
+INSERT INTO ASTEROID VALUES
+(1,'Ceres',0.939,0.00072,0.0046),
+(2,'Psyche',0.223,0.0361,0.0051),
+(3,'Elektra',0.453,0.0724,0.0855),
+(4,'Hektor',0.648,0.00042,0.00005),
+(5,'Vesta',0.525,0.00835,0.00245);
+
+/* Comet data from: 
+https://en.wikipedia.org/wiki/Great_comet#List_of_great_comets
+*/
+INSERT INTO COMET VALUES
+(1,'Comet Skjellerup–Maristany',NULL),
+(2,'Comet Halley',0.0638),
+(3,'Comet Donati',NULL),
+(4,'Coggia',NULL),
+(5,'Comet Hale–Bopp',NULL);
