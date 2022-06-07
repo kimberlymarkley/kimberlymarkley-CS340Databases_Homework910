@@ -3,7 +3,7 @@
 <div id="featured">
     <h2>Relational Schema</h2>
     <div id="motorcycle">
-        <a href="https://imgur.com/BNVcXWf"><img src="https://i.imgur.com/BNVcXWf.png" title="source: imgur.com" /></a>
+        <a href="/assets/images/CS340-Homework9-Relational-Schema.png"><img src="/assets/images/CS340-Homework9-Relational-Schema.png" title="Relational Schema"></a>
     </div>
 </div>
 
