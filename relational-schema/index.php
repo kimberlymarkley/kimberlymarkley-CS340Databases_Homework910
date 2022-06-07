@@ -1,8 +1,10 @@
 <?php include '../header.php'; ?>
 
-<h2>Relational Schema</h2>
-<ul id="manufacturers">
-<a href="https://imgur.com/BNVcXWf"><img src="https://i.imgur.com/BNVcXWf.png" title="source: imgur.com" /></a>
-</ul>
+<div id="featured">
+    <h2>Relational Schema</h2>
+    <div id="motorcycle">
+        <a href="https://imgur.com/BNVcXWf"><img src="https://i.imgur.com/BNVcXWf.png" title="source: imgur.com" /></a>
+    </div>
+</div>
 
 <?php include '../footer.php'; ?>

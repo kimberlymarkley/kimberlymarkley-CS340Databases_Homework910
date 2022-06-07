@@ -1,8 +1,10 @@
 <?php include '../header.php'; ?>
 
-<h2>EER Diagram</h2>
-<ul id="manufacturers">
-<a href="https://imgur.com/Z2cDHRe"><img src="https://i.imgur.com/Z2cDHRe.png" title="source: imgur.com" /></a>
-</ul>
+<div id="featured">
+    <h2>EER Diagram</h2>
+    <div id="motorcycle">
+        <a href="/assets/CS340-Homework9-EER-Diagram.png"><img src="/assets/CS340-Homework9-EER-Diagram.png" title="EER Diagram"></a>
+    </div>
+</div>
 
 <?php include '../footer.php'; ?>
