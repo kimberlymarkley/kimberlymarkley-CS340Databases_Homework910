@@ -27,3 +27,4 @@
     }
 ?>
 </pre>
+<?php include 'footer.php'; ?>
