@@ -23,6 +23,7 @@ Homework 9 & 10
 
 /* all size data is relative to Earth, and all time 
 measurement is relative to Earth's day length
+moon mass in kilos
 */
 
 DROP TABLE if exists ARTIFICIAL_SATELLITE;
@@ -207,4 +208,25 @@ https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Sol
 INSERT INTO STAR VALUES
 (1,'Sol',332978.9,3.828,109.3);
 
+DROP TABLE if exists MOON;
+CREATE TABLE MOON (
+    Mid INTEGER NOT NULL,
+    Moon_name VARCHAR(50) NOT NULL,
+    Pid INTEGER NOT NULL,
+    Radius DOUBLE PRECISION(10,6) NOT NULL,
+    Gravity DOUBLE PRECISION(10,6) NOT NULL,
+    Albedo DOUBLE PRECISION(10,6) NOT NULL,
+    PRIMARY KEY (Mid),
+    FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
+);
+
+/* Moon data from: 
+https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
+*/
+INSERT INTO MOON VALUES
+(1,'Moon',3,0.272,0.1654,0.12),
+(2,'Io',5,0.285,0.1831,0.63),
+(3,'Ganymede',5,0.413,0.1456,0.43),
+(4,'Dione',6,0.088,0.0236,0.998),
+(5,'Mimas',6,0.031,0.00649,0.962);
 
