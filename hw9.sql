@@ -170,7 +170,7 @@ INSERT INTO PLANET VALUES
 (8,'Neptune',17,3.883,1.12,60182,0.67125,0),
 (9,'Pluto',0.0022,0.180,0.06,9090483.5,6.3872,1);
 
-/* Satellite data from links here:
+/* Satellite data from:
 https://en.wikipedia.org/wiki/Category:Lists_of_satellites
 */
 INSERT INTO ARTIFICIAL_SATELLITE VALUES
@@ -180,7 +180,7 @@ INSERT INTO ARTIFICIAL_SATELLITE VALUES
 (4, 'COSMO-SkyMed 4','Italy'),
 (5, 'NigeriaSat-1','Nigeria');
 
-/* Satellite data from links here:
+/* Satellite data from:
 https://en.wikipedia.org/wiki/Category:Lists_of_satellites
 */
 INSERT INTO SATELLITE_TASK VALUES
@@ -199,3 +199,12 @@ INSERT INTO ALIEN_LIFE VALUES
 (3,'Vulcan',1),
 (4,'Xenomorph',1),
 (5,"Na'vi",1);
+
+/*
+Star data from:
+https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
+*/
+INSERT INTO STAR VALUES
+(1,'Sol',332978.9,3.828,109.3);
+
+
