@@ -190,15 +190,6 @@ INSERT INTO SATELLITE_TASK VALUES
 (4,'Used for defense and security assurance in Italy and other countries, seismic hazard analysis, environmental disaster monitoring, and agricultural mapping.'),
 (5,'Part of the worldwide Disaster Monitoring Constellation System.');
 
-DROP TABLE if exists ALIEN_LIFE;
-CREATE TABLE ALIEN_LIFE (
-    Satid INTEGER NOT NULL,
-    Alien_name VARCHAR(50) NOT NULL,
-    Sentient BOOLEAN NOT NULL,
-    PRIMARY KEY (Satid, Alien_name),
-    FOREIGN KEY (Satid) REFERENCES ARTIFICIAL_SATELLITE(Satid)
-);
-
 /* 
 Fictional data used for Alien Life values.
 */
