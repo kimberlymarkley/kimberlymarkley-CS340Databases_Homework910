@@ -77,14 +77,13 @@ CREATE TABLE MOON (
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
 );
 
-
 /* used the command "sqlite3 hw9.db < hw9.sql" to run and check for syntax errors until 
 I started to get errors because not all the tables are created yet */
 
 CREATE TABLE MOON_ORBITS (
     Pid INTEGER NOT NULL,
     Mid INTEGER NOT NULL,
-    PRIMARY KEY (Pid, Mid);
+    PRIMARY KEY (Pid, Mid),
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid),
     FOREIGN KEY (Mid) REFERENCES MOON(Mid)
 );
@@ -113,7 +112,7 @@ CREATE TABLE MONITORS (
     Alien_name VARCHAR(50) NOT NULL,
     Sid INTEGER NOT NULL,
     Pid INTEGER NOT NULL,
-    PRIMARY KEY (Cid, Aid, Mid, Satid, Alien_name, Sid, Pid);
+    PRIMARY KEY (Cid, Aid, Mid, Satid, Alien_name, Sid, Pid),
     FOREIGN KEY (Cid) REFERENCES COMET(Cid),
     FOREIGN KEY (Aid) REFERENCES ASTEROID(Aid),
     FOREIGN KEY (Mid) REFERENCES MOON(Mid),
@@ -127,7 +126,7 @@ CREATE TABLE ORBITS (
     Aid INTEGER NOT NULL,
     Pid INTEGER NOT NULL,
     Sid INTEGER NOT NULL,
-    PRIMARY KEY (Aid, Pid, Sid);
+    PRIMARY KEY (Aid, Pid, Sid),
     FOREIGN KEY (Aid) REFERENCES ASTEROID(Aid),
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid),
     FOREIGN KEY (Sid) REFERENCES STAR(Sid)
@@ -137,7 +136,7 @@ CREATE TABLE COLLIDES (
     Pid INTEGER NOT NULL,
     Mid INTEGER NOT NULL,
     Aid INTEGER NOT NULL,
-    PRIMARY KEY (Pid, Mid, Aid);
+    PRIMARY KEY (Pid, Mid, Aid),
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid),
     FOREIGN KEY (Mid) REFERENCES MOON(Mid),
     FOREIGN KEY (Aid) REFERENCES ASTEROID(Aid)
@@ -155,4 +154,3 @@ DROP TABLE COMET;
 DROP TABLE MONITORS;
 DROP TABLE ORBITS;
 DROP TABLE COLLIDES;
-
