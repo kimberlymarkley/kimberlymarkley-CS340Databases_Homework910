@@ -160,8 +160,8 @@ INSERT INTO ARTIFICIAL_SATELLITE VALUES
 (1,'Aqua','USA'),
 (2,'CALIPSO','France'),
 (3,'Chollian-2A','South Korea'),
-(4, 'COSMO-SkyMed 4','Italy'),
-(5, 'NigeriaSat-1','Nigeria');
+(4,'COSMO-SkyMed 4','Italy'),
+(5,'NigeriaSat-1','Nigeria');
 
 /* Satellite data from:
 https://en.wikipedia.org/wiki/Category:Lists_of_satellites
