@@ -3,6 +3,8 @@ Melissa Swearingen & Kimberly Markley
 CS 340 Databases
 Homework 9 & 10
 
+github link: https://github.com/kimberlymarkley/kimberlymarkley-CS340Databases_Homework910
+
 
 Part 1: Entity-Relationship Diagram
 
