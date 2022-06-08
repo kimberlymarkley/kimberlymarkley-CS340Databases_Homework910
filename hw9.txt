@@ -61,21 +61,42 @@ Talk about reasoning behind
 - 1 to M star for scalibility as universe is explored (also explain participation)
 - Monitors Table just full of ids? used to illustrate and quantify the structural constraint that all entities are monitored (page 88-92)
 
-<p>
-    Sample Interesting Queries: 
-    <br> 
-    <br>
-    1) Asteroids and Comets that have a mass greater than Mercury and less than Earth - select name, mass from (select name, mass from asteroid union select name, mass from comet) where mass between (select mass from planet where name='Mercury') and (select mass from planet where name='Earth') order by mass asc;
-    <br>
-    <br>
-    2) ALIENS! Solar System Names that contain the letter combination 'ol' - select name from (select name from artificial_satellite union select name from alien_life union select name from star union select name from planet union select name from moon union select name from asteroid union select name from comet) where name like '%ol%' order by name asc;
-    <br>
-    <br>
-    3) planets and their coresponding moons - SELECT Planet.Name, Moon.Name FROM Moon, Planet WHERE Planet.Pid=Moon.Pid ORDER BY Planet.Name ASC;
-    <br>
-    <br>
-    4) The smallest and largest gravities from either Planets or Moons - select min(mn), max(mx) from (select max(gravity) as mx, min(gravity) as mn from planet union select max(gravity) as mx, min(gravity) as mn from moon) as subquery;
-    <br>
-    <br>
-    5) The name and task of the satellite from Nigeria - select artificial_satellite.name, satellite_task.task from artificial_satellite, satellite_task where artificial_satellite.satid=satellite_task.satid and artificial_satellite.country_origin='Nigeria';
-</p>
+Part 5: Sample Transactions
+1. Asteroids and Comets that have a mass greater than Mercury and less than Earth.
+    SELECT Name, Mass 
+    FROM (SELECT Name, Mass FROM Asteroid UNION SELCT Name, Mass FROM Comet) 
+    WHERE Mass BETWEEN (SELECT Mass FROM Planet WHERE Name='Mercury') AND (SELECT Mass FROM Planet WHERE Name='Earth') 
+    ORDER BY Mass ASC 
+    LIMIT 5;
+2. Solar System names that contain the letter combination 'ol'.
+    SELECT Name 
+    FROM (
+        SELECT Name 
+        FROM Artificial_satellite 
+            UNION SELECT Name FROM Alien_life 
+            UNION SELECT Name FROM STAR
+            UNION SELECT Name FROM Planet
+            UNION SELECT Name FROM Moon 
+            UNION SELECT Name FROM asteroid 
+            UNION SELECT Name FROM comet) 
+    WHERE Name LIKE '%ol%' 
+    ORDER BY Name ASC
+    LIMIT 5;
+3. Planets and their corresponding Moons.
+    SELECT Planet.Name, Moon.Name 
+    FROM Moon, Planet 
+    WHERE Planet.Pid=Moon.Pid 
+    ORDER BY Planet.Name ASC
+    LIMIT 5;
+4. The smallest and largest gravities of all Planets and Moons.
+    SELECT MIN(mn), MAX(mx)
+    FROM (
+        SELECT MAX(Gravity) as mx, MIN(Gravity) as mn
+        FROM Planet
+            UNION SELECT MAX(Gravity) as mx, MIN(Gravity) as mn
+            FROM Moon) AS Subquery;
+5. The name and task of the satellite from Nigeria.
+    SELECT Artificial_satellite.Name, Satellite_task.Task 
+    FROM Artificial_satellite, Satellite_task
+    WHERE Artificial_satellite.Satid=Satellite_task.Satid
+    AND Artificial_satellite.Country_origin='Nigeria';
