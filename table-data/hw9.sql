@@ -3,26 +3,10 @@ Name: Melissa Swearingen & Kimberly Markley
 SQL Tables for 'Sol' System
 Databases 340
 Homework 9 & 10
-*/
 
-
-/* 
- * For each table created, you should include: 
- * 
- *    -name (be descriptive) of each attribute
- *    -type of each attribute (consider the storage space implications of each choice)
- *    -attribute constraints (e.g., NOT NULL, uniqueness, default value)
- *    -primary key
- *    -foreign keys (all of them)
- *    -referential integrity constraints
- *    -CHECK clauses (if needed)
- *    -short comment linking the table creation command to the entity name of your ER diagram
- *    -include a DROP TABLE command before each CREATE TABLE command, to facilitate quick database re-generation
- *    used the command "sqlite3 hw9.db < hw9.sql" to run and check for syntax errors
- */
-
-/* all size data is relative to Earth, and all time 
-measurement is relative to Earth's day length
+Note:
+    - all size data is relative to Earth, and all time 
+    measurement is relative to Earth's day length
 */
 
 DROP TABLE if exists ARTIFICIAL_SATELLITE;
