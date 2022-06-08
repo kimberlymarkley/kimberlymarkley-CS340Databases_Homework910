@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <main>
-    <div id="featured">
+    <div id="explanation">
         <h2>Welcome to the Celestial Body Database</h2>
         <p>
             This database contains information about The Solar System.
@@ -23,7 +23,7 @@
 </form>
 
 <pre>
-    <table id="motorcycles">
+    <table id="data">
         <thead>
             <tr>
             </tr>
@@ -45,7 +45,35 @@
         </tbody>
     </table>
 </pre>
-</main>
+
+<p>
+    Sample Interesting Queries: 
+    <br> 
+    <br>
+    1) Asteroids, Comets that have a Mass less than Earth's Mass but greater than Mercury's Mass
+    <br>
+    <br>
+    SELECT A.Aid, C.Cid, A.Mass, C.Mass 
+    <br>
+    FROM ASTEROID AS A, COMET AS C
+    <br>
+    WHERE 
+    <br>    A.Mass > (SELECT Mass FROM PLANET WHERE Pid = 'Mercury') AND
+    <br>    A.Mass < (SELECT Mass FROM PLANET WHERE Pid = 'Earth') AND
+    <br>    C.Mass > (SELECT Mass FROM PLANET WHERE Pid = 'Mercury') AND
+    <br>    C.Mass < (SELECT Mass FROM PLANET WHERE Pid = 'Earth');
+    <br>
+    ^^^^^^^^ This is not correct. ^^^^^^^^
+    <br>
+    <br> 
+    2) Diameter and Radius of all Stars, Planets, Moons, Asteroids, and Comets
+    <br>
+    3) ?
+    <br>
+    4) ?
+    <br>
+    5) ?
+</p>
 
 <?php mysqli_close($db); ?>
 <?php include 'footer.php'; ?>
