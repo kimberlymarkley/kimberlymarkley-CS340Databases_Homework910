@@ -9,6 +9,9 @@ Note:
     measurement is relative to Earth's day length
 */
 
+/* Entity Name:
+Artificial Satellite
+*/
 DROP TABLE if exists ARTIFICIAL_SATELLITE;
 CREATE TABLE ARTIFICIAL_SATELLITE ( 
     Satid INTEGER NOT NULL UNIQUE,
@@ -17,6 +20,9 @@ CREATE TABLE ARTIFICIAL_SATELLITE (
     PRIMARY KEY (Satid)
 );
 
+/* Multivalued Attribute:
+Task
+*/
 DROP TABLE if exists SATELLITE_TASK;
 CREATE TABLE SATELLITE_TASK (
     Satid INTEGER NOT NULL,
@@ -25,6 +31,9 @@ CREATE TABLE SATELLITE_TASK (
     FOREIGN KEY (Satid) REFERENCES ARTIFICIAL_SATELLITE(Satid) ON DELETE CASCADE
 );
 
+/* Entity Name:
+Alien Life
+*/
 DROP TABLE if exists ALIEN_LIFE;
 CREATE TABLE ALIEN_LIFE (
     Satid INTEGER NOT NULL,
@@ -34,6 +43,9 @@ CREATE TABLE ALIEN_LIFE (
     FOREIGN KEY (Satid) REFERENCES ARTIFICIAL_SATELLITE(Satid)
 );
 
+/* Entity Name:
+Star
+*/
 DROP TABLE if exists STAR;
 CREATE TABLE STAR (
     Sid INTEGER NOT NULL UNIQUE,
@@ -44,6 +56,9 @@ CREATE TABLE STAR (
     PRIMARY KEY (Sid)
 );
 
+/* Entity Name:
+Planet
+*/
 DROP TABLE if exists PLANET;
 CREATE TABLE PLANET (
     Pid INTEGER NOT NULL UNIQUE,
@@ -57,6 +72,9 @@ CREATE TABLE PLANET (
     PRIMARY KEY (Pid)
 );
 
+/* Entity Name:
+Moon
+*/
 DROP TABLE if exists MOON;
 CREATE TABLE MOON (
     Mid INTEGER NOT NULL UNIQUE,
@@ -69,6 +87,9 @@ CREATE TABLE MOON (
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
 );
 
+/* Relationship:
+Orbits
+*/
 DROP TABLE if exists MOON_ORBIT;
 CREATE TABLE MOON_ORBIT (
     Pid INTEGER NOT NULL,
@@ -78,6 +99,9 @@ CREATE TABLE MOON_ORBIT (
     FOREIGN KEY (Mid) REFERENCES MOON(Mid)
 );
 
+/* Entity Name:
+Arsteroid
+*/
 DROP TABLE if exists ASTEROID;
 CREATE TABLE ASTEROID (
     Aid INTEGER NOT NULL UNIQUE,
@@ -88,6 +112,9 @@ CREATE TABLE ASTEROID (
     PRIMARY KEY (Aid)
 );
 
+/* Entity Name:
+Comet
+*/
 DROP TABLE if exists COMET;
 CREATE TABLE COMET (
     Cid INTEGER NOT NULL UNIQUE,
@@ -96,6 +123,9 @@ CREATE TABLE COMET (
     PRIMARY KEY (Cid)
 );
 
+/* Relationship:
+Monitors
+*/
 DROP TABLE if exists MONITORS;
 CREATE TABLE MONITORS (
     Cid INTEGER NOT NULL,
@@ -115,6 +145,9 @@ CREATE TABLE MONITORS (
     FOREIGN KEY (Pid) REFERENCES PLANET(Pid)
 );
 
+/* Relationship:
+Orbits
+*/
 DROP TABLE if exists ORBITS;
 CREATE TABLE ORBITS (
     Aid INTEGER NOT NULL,
@@ -126,6 +159,9 @@ CREATE TABLE ORBITS (
     FOREIGN KEY (Sid) REFERENCES STAR(Sid)
 );
 
+/* Relationship:
+Collides
+*/
 DROP TABLE if exists COLLIDES;
 CREATE TABLE COLLIDES (
     Pid INTEGER NOT NULL,
