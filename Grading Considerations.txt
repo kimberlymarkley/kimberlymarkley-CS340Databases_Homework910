@@ -20,3 +20,8 @@ Deliverables:
 4. a txt document with sample queries and result set
 
 Include public git hub
+
+Talk about reasoning behind  
+- weak entity for Alien Life 
+- 1 to M star for scalibility as universe is explored (also explain participation)
+- Monitors Table just full of ids? used to illustrate and quantify the structural constraint that all entities are monitored (page 88-92)
