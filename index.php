@@ -65,6 +65,8 @@
     <br>
     ^^^^^^^^ This is not correct. ^^^^^^^^
     <br>
+    Select A.Name, C.Name, A.Mass, C.Mass FROM Asteroid as A, Comet as C;
+    <br>
     <br> 
     2) Diameter and Radius of all Stars, Planets, Moons, Asteroids, and Comets
     <br>
