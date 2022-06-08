@@ -46,36 +46,5 @@
     </table>
 </pre>
 
-<p>
-    Sample Interesting Queries: 
-    <br> 
-    <br>
-    1) Asteroids, Comets that have a Mass less than Earth's Mass but greater than Mercury's Mass
-    <br>
-    <br>
-    SELECT A.Aid, C.Cid, A.Mass, C.Mass 
-    <br>
-    FROM ASTEROID AS A, COMET AS C
-    <br>
-    WHERE 
-    <br>    A.Mass > (SELECT Mass FROM PLANET WHERE Pid = 'Mercury') AND
-    <br>    A.Mass < (SELECT Mass FROM PLANET WHERE Pid = 'Earth') AND
-    <br>    C.Mass > (SELECT Mass FROM PLANET WHERE Pid = 'Mercury') AND
-    <br>    C.Mass < (SELECT Mass FROM PLANET WHERE Pid = 'Earth');
-    <br>
-    ^^^^^^^^ This is not correct. ^^^^^^^^
-    <br>
-    Select A.Name, C.Name, A.Mass, C.Mass FROM Asteroid as A, Comet as C;
-    <br>
-    <br> 
-    2) Diameter and Radius of all Stars, Planets, Moons, Asteroids, and Comets
-    <br>
-    3) planets and their coresponding moons
-    <br>
-    4) The planet or moon with the largest gravity and smallest gravity
-    <br>
-    5) ?
-</p>
-
 <?php mysqli_close($db); ?>
 <?php include 'footer.php'; ?>
