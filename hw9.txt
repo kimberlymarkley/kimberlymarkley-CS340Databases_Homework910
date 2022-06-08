@@ -1,3 +1,38 @@
+Melissa Swearingen & Kimberly Markley
+"Sol" System 
+CS 340 Databases
+Homework 9 & 10
+
+
+Part 1: Entity-Relationship Diagram
+
+** Planet **
+Multiple Planets orbit one Star; some are orbited by one or more Moons.
+All Planets are monitored by many Artificial Satellites.
+
+** Star **
+The Sol System has just one Star, but this model was built for scalibility
+and could be used to model other solar systems with more than one Star.
+It is also monitored by multiple Artificial Satellites.
+
+** Asteroid **
+Many Asteroids orbit the solar system's Star, and can collide with Planets and Moons.
+Not all Asteroids are monitored by Artificial Satellites.
+
+** Moon **
+All moons orbit Planets (but all Planets do not have moons). 
+
+** Alien Life **
+Not much is known about Alien Life, since it hides from all Artificial Satellites. 
+Most of the data for Alien Life is hearsay, and it must be a weak entity. 
+
+** Comet **
+Not all Comets are monitored by Artificial Satellites, nor do all Comets orbit the sun,
+since it is possible that some enter our solar system and from afar and just pass through.
+Comets are noticeable as they approach the Star, and some will acquire names. 
+
+
+
 Grading Considerations
 	1	If there are extra constraints that cannot be captured by the E/R diagram, list them in a supplementary text file.
 
