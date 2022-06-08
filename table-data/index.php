@@ -2,7 +2,7 @@
 
 <main>
 
-<div id="featured">
+<div id="explanation">
     <h2>Data Tables</h2>
     <p>
         Each of these data tables contains up to 5 random tuples of data.
@@ -23,7 +23,7 @@
 <div>
     <h3>Planets</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Planet ID</th>
@@ -54,7 +54,7 @@
 <div>
     <h3>Artificial Satellites</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Artificial Satellite ID</th>
@@ -80,7 +80,7 @@
 <div>
     <h3>Satellites</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Satellite ID</th>
@@ -105,7 +105,7 @@
 <div>
     <h3>Aliens</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Alien ID</th>
@@ -131,7 +131,7 @@
 <div>
     <h3>Stars</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Star ID</th>
@@ -159,7 +159,7 @@
 <div>
     <h3>Moons</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Moon ID</th>
@@ -188,7 +188,7 @@
 <div>
     <h3>Moon Orbits</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Planet ID</th>
@@ -213,7 +213,7 @@
 <div>
     <h3>Asteroids</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Asteroid ID</th>
@@ -241,7 +241,7 @@
 <div>
     <h3>Comets</h3>
 </div>
-<table id="motorcycles">
+<table id="data">
     <thead>
         <tr>
             <th>Comet ID</th>
