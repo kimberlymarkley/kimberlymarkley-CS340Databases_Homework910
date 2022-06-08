@@ -63,6 +63,18 @@ Talk about reasoning behind
 - 1 to M star for scalibility as universe is explored (also explain participation)
 - Monitors Table just full of ids? used to illustrate and quantify the structural constraint that all entities are monitored (page 88-92)
 
+Part 4: Sample Data
+These queries are also in hw9.sql and /table-data/index.php
+SELECT * FROM ARTIFICIAL_SATELLITE ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM SATELLITE_TASK ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM ALIEN_LIFE ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM STAR ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM MOON ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM ASTEROID ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM COMET ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM PLANET ORDER BY RANDOM() LIMIT 5;
+SELECT * FROM MOON_ORBIT ORDER BY RANDOM() LIMIT 5;
+
 Part 5: Sample Transactions
 1. Asteroids and Comets that have a mass greater than Mercury and less than Earth.
     SELECT Name, Mass 
